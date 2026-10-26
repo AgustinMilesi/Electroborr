@@ -13,6 +13,7 @@ import {
   Sparkles
 } from 'lucide-react';
 import { SERVICES_DATA } from '../../data/electroborrData';
+import { ElectroborrLogo } from '../brand/ElectroborrLogo';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -39,29 +40,9 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Logo Minimalista de Ingeniería */}
-          <Link to="/" className="flex items-center gap-3 group focus:outline-none">
-            <div className="w-10 h-10 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/50 group-hover:bg-zinc-800/80 transition-all">
-              <svg 
-                className="w-5 h-5 text-emerald-500" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              >
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-              </svg>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-xl tracking-tight text-zinc-100 group-hover:text-white transition-colors">
-                ELECTRO<span className="text-emerald-500 font-black">BORR</span>
-              </span>
-              <span className="font-mono text-[9px] tracking-widest uppercase text-zinc-400 -mt-0.5">
-                Electromecánica Integral
-              </span>
-            </div>
+          {/* Emblema Oficial Electroborr */}
+          <Link to="/" className="flex items-center group focus:outline-none py-1">
+            <ElectroborrLogo variant="full" size="sm" />
           </Link>
 
           {/* Desktop Nav Items */}

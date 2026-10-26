@@ -12,6 +12,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { WORKSHOP_DATA, SERVICES_DATA } from '../../data/electroborrData';
+import { ElectroborrLogo } from '../brand/ElectroborrLogo';
 
 export const Footer: React.FC = () => {
   return (
@@ -23,20 +24,8 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Identidad & Propuesta de Valor */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-emerald-400">
-                <svg className="w-5 h-5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-                </svg>
-              </div>
-              <div>
-                <span className="font-heading font-extrabold text-lg tracking-tight text-zinc-100">
-                  ELECTRO<span className="text-emerald-500">BORR</span>
-                </span>
-                <p className="font-mono text-[9px] uppercase tracking-widest text-zinc-500">
-                  Electromecánica Integral
-                </p>
-              </div>
+            <div className="flex items-start">
+              <ElectroborrLogo variant="full" size="sm" />
             </div>
 
             <p className="text-xs text-zinc-400 leading-relaxed">
