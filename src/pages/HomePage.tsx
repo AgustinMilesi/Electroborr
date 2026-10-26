@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import { Hero } from '../components/sections/Hero';
 import { BrandTicker } from '../components/sections/BrandTicker';
-import { ServicePagesGrid } from '../components/sections/ServicePagesGrid';
-import { SymptomChecker } from '../components/sections/SymptomChecker';
+import { InteractiveHub } from '../components/sections/InteractiveHub';
+import { TrustAndWarranty } from '../components/sections/TrustAndWarranty';
 import { BookingWizard } from '../components/sections/BookingWizard';
-import { OurStoryAndWorkshop } from '../components/sections/OurStoryAndWorkshop';
-import { WarrantyAndCoupons } from '../components/sections/WarrantyAndCoupons';
 import { ReviewsSection } from '../components/sections/ReviewsSection';
 import { LocalBlogSection } from '../components/sections/LocalBlogSection';
 import { FaqSection } from '../components/sections/FaqSection';
@@ -22,11 +20,9 @@ export const HomePage: React.FC = () => {
     <>
       <Hero />
       <BrandTicker />
-      <ServicePagesGrid />
-      <SymptomChecker onSelectSymptom={handleSymptomSelect} />
+      <InteractiveHub onSelectSymptom={handleSymptomSelect} />
+      <TrustAndWarranty />
       <BookingWizard initialSymptom={selectedSymptom} />
-      <OurStoryAndWorkshop />
-      <WarrantyAndCoupons />
       <ReviewsSection />
       <LocalBlogSection />
       <FaqSection />

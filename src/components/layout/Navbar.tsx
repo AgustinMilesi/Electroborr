@@ -23,11 +23,12 @@ export const Navbar: React.FC = () => {
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
+    const targetId = (id === 'servicios' || id === 'sintomas') ? 'interactivo' : (id === 'garantia' ? 'taller' : id);
     if (!isHome) {
-      window.location.href = `/#${id}`;
+      window.location.href = `/#${targetId}`;
       return;
     }
-    const element = document.getElementById(id);
+    const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
