@@ -4,7 +4,6 @@ import {
   MessageSquare, 
   ShieldCheck, 
   Clock, 
-  Tag, 
   AlertCircle 
 } from 'lucide-react';
 import { WORKSHOP_DATA, SERVICES_DATA } from '../../data/electroborrData';
@@ -24,8 +23,7 @@ export const BookingWizard: React.FC<BookingWizardProps> = ({ initialSymptom }) 
     fuelType: 'Nafta',
     preferredDate: '',
     preferredTimeSlot: 'Mañana (08:30 a 12:30 hs)',
-    clientName: '',
-    couponApplied: true
+    clientName: ''
   });
 
   useEffect(() => {
@@ -52,7 +50,6 @@ export const BookingWizard: React.FC<BookingWizardProps> = ({ initialSymptom }) 
       `🔧 *Servicio:* ${serviceName}`,
       formData.symptomText ? `⚠️ *Falla:* ${formData.symptomText}` : '',
       `📅 *Fecha:* ${formData.preferredDate || 'A coordinar'} (${formData.preferredTimeSlot})`,
-      formData.couponApplied ? `🎟️ *Cupón Web:* [${WORKSHOP_DATA.coupon.code}] Aplicado` : '',
       `━━━━━━━━━━━━━━━━━━━━`,
       `_Enviado desde el turnero online de electroborr.com.ar_`
     ].filter(Boolean);
@@ -207,20 +204,6 @@ export const BookingWizard: React.FC<BookingWizardProps> = ({ initialSymptom }) 
                   </select>
                 </div>
               </div>
-
-              {/* Check Cupón */}
-              <label className="flex items-center gap-2 p-2.5 rounded-xl bg-zinc-950 border border-zinc-800 cursor-pointer hover:border-emerald-500/40 transition-colors">
-                <input
-                  type="checkbox"
-                  checked={formData.couponApplied}
-                  onChange={(e) => setFormData({ ...formData, couponApplied: e.target.checked })}
-                  className="w-3.5 h-3.5 rounded text-emerald-500 focus:ring-emerald-500 bg-zinc-900 border-zinc-700"
-                />
-                <span className="text-xs text-zinc-300 flex items-center gap-1.5 font-medium">
-                  <Tag className="w-3.5 h-3.5 text-emerald-400" />
-                  Incluir Beneficio Web [{WORKSHOP_DATA.coupon.code}] (Prioridad + Chequeo bonificado)
-                </span>
-              </label>
 
               {/* Submit */}
               <button

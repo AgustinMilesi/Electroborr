@@ -176,5 +176,5 @@ export interface BookingFormData {
   preferredDate: string;
   preferredTimeSlot: string;
   clientName: string;
-  couponApplied: boolean;
+  couponApplied?: boolean;
 }
