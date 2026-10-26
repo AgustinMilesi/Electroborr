@@ -24,16 +24,16 @@ export const TrustAndWarranty: React.FC = () => {
   };
 
   return (
-    <section id="taller" className="py-14 sm:py-20 bg-zinc-950 border-b border-zinc-800/80">
+    <section id="taller" className="py-12 sm:py-16 bg-zinc-950 border-b border-zinc-800/80 w-full max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Encabezado */}
-        <div className="max-w-2xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-emerald-400 mb-2.5">
+        <div className="max-w-2xl mb-10">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-emerald-400 mb-2">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>TRANSPARENCIA & GARANTÍA ESCRITA</span>
+            <span>TRANSPARENCIA & ESTÁNDARES DE TALLER</span>
           </div>
-          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl lg:text-4xl text-zinc-50 tracking-tight">
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-zinc-50 tracking-tight">
             Por Qué Dejar Tu Auto en Electroborr
           </h2>
           <p className="mt-2 text-sm text-zinc-400">
@@ -41,52 +41,59 @@ export const TrustAndWarranty: React.FC = () => {
           </p>
         </div>
 
-        {/* Grilla 3 Columnas: 1. La Historia de Nacho | 2. Garantía 90 Días | 3. Cupón Web */}
+        {/* Grilla 3 Columnas: 1. Nacho con Foto Real de Taller | 2. Garantía 90 Días | 3. Cupón Web */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           
-          {/* Card 1: Nacho & El Taller */}
-          <div className="rounded-2xl bg-zinc-900/60 border border-zinc-800 p-6 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center gap-2.5 mb-4">
-                <div className="p-2 rounded-xl bg-zinc-950 border border-zinc-800 text-emerald-400">
-                  <ShieldCheck className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="font-heading font-bold text-base text-zinc-100">
-                    Atendido por Nacho
-                  </h3>
-                  <span className="text-[10px] font-mono text-zinc-500 uppercase">
-                    Florida 647, Loma Hermosa
-                  </span>
-                </div>
-              </div>
-
-              <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-4">
-                &ldquo;La electrónica también es parte del motor&rdquo;. No cambiamos piezas al azar por intuición: invertimos en osciloscopios de 4 canales y bancos de prueba para mostrarte la señal real que justifica cada trabajo.
-              </p>
-
-              <div className="space-y-2 text-xs text-zinc-300">
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>Presupuesto cerrado antes de iniciar</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>Laboratorio propio de microelectrónica</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                  <span>Trabas de calado y torquímetro OEM</span>
-                </div>
+          {/* Card 1: Nacho & El Taller con Imagen Real de Taller */}
+          <div className="rounded-2xl bg-zinc-900/60 border border-zinc-800 overflow-hidden flex flex-col justify-between">
+            <div className="relative h-40 w-full overflow-hidden border-b border-zinc-800">
+              <img
+                src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=800&q=80"
+                alt="Instalaciones del taller mecánico Electroborr"
+                className="w-full h-full object-cover object-center"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />
+              <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-[11px] font-mono text-zinc-200">
+                <span className="font-semibold text-zinc-100">Florida 647, Loma Hermosa</span>
+                <span className="bg-zinc-900/90 text-emerald-400 px-2 py-0.5 rounded border border-zinc-800 text-[10px]">
+                  Atención Directa
+                </span>
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500">
-              * Comunicación directa y fotos del proceso por WhatsApp.
+            <div className="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 className="font-heading font-bold text-base text-zinc-100 mb-1">
+                  Atendido por su dueño (Nacho)
+                </h3>
+                <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-4">
+                  &ldquo;La electrónica también es parte del motor&rdquo;. No cambiamos piezas al azar por intuición: mostramos la señal real que justifica cada reparación.
+                </p>
+
+                <div className="space-y-2 text-xs text-zinc-300">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>Presupuesto cerrado antes de iniciar</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>Laboratorio propio de computadoras (ECUs)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                    <span>Herramental y trabas de calado OEM</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-5 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500">
+                * Fotos y reportes del proceso por WhatsApp.
+              </div>
             </div>
           </div>
 
-          {/* Card 2: Garantía Escrita */}
+          {/* Card 2: Garantía Escrita 90 Días */}
           <div className="rounded-2xl bg-zinc-900/60 border border-zinc-800 p-6 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-2.5 mb-4">
@@ -123,7 +130,7 @@ export const TrustAndWarranty: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500">
+            <div className="mt-5 pt-3 border-t border-zinc-800/80 text-[11px] font-mono text-zinc-500">
               * Certificado entregado al retirar tu vehículo.
             </div>
           </div>

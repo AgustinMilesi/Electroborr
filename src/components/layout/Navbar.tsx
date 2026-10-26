@@ -38,10 +38,10 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="sticky top-0 z-40 bg-zinc-950/90 border-b border-zinc-800 backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20 gap-3">
           
           {/* Emblema Oficial Electroborr */}
-          <Link to="/" className="flex items-center group focus:outline-none py-1">
+          <Link to="/" className="flex items-center group focus:outline-none py-1 min-w-0 flex-1 sm:flex-initial">
             <ElectroborrLogo variant="full" size="sm" />
           </Link>
 

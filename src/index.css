@@ -7,11 +7,11 @@
     color-scheme: dark;
   }
   
-  html {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
     scroll-behavior: smooth;
-  }
-
-  body {
     background-color: #09090b;
     color: #f4f4f5;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";

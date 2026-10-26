@@ -11,15 +11,15 @@ export const ElectroborrLogo: React.FC<ElectroborrLogoProps> = ({
   variant = 'full',
   size = 'md'
 }) => {
-  const heightClass = size === 'sm' ? 'h-8' : size === 'lg' ? 'h-16' : 'h-11';
+  const heightClass = size === 'sm' ? 'h-5 sm:h-7' : size === 'lg' ? 'h-12 sm:h-16' : 'h-8 sm:h-10';
 
   return (
-    <div className={`inline-flex flex-col items-center select-none ${className}`}>
+    <div className={`flex flex-col items-start sm:items-center select-none max-w-full overflow-hidden ${className}`}>
       
       {/* Silueta del Auto con Circuitos Integrados (Vector SVG Limpio) */}
       {(variant === 'full' || variant === 'symbol-only') && (
         <svg 
-          className={`${heightClass} w-auto transition-transform duration-300 group-hover:scale-[1.02]`}
+          className={`${heightClass} w-auto max-w-full transition-transform duration-300 group-hover:scale-[1.02]`}
           viewBox="0 0 420 130" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
@@ -44,19 +44,15 @@ export const ElectroborrLogo: React.FC<ElectroborrLogoProps> = ({
 
           {/* Circuitos Electrónicos PCB en Verde Esmeralda (ADN Electroborr) */}
           <g stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            {/* Traza 1 Superior */}
             <path d="M 110,60 L 140,60 L 155,48 L 220,48 L 235,58 L 270,58" />
             <circle cx="270" cy="58" r="2.5" fill="#10B981" />
             
-            {/* Traza 2 Media */}
             <path d="M 95,70 L 130,70 L 145,62 L 205,62 L 215,70 L 290,70 L 305,62 L 325,62" />
             <circle cx="325" cy="62" r="2.5" fill="#10B981" />
 
-            {/* Traza 3 Inferior */}
             <path d="M 115,78 L 150,78 L 165,70 L 245,70 L 255,78 L 335,78" />
             <circle cx="335" cy="78" r="2.5" fill="#10B981" />
 
-            {/* Derivaciones secundarias de circuito */}
             <path d="M 170,62 L 180,52 L 195,52" />
             <circle cx="195" cy="52" r="2" fill="#10B981" />
 
@@ -64,7 +60,6 @@ export const ElectroborrLogo: React.FC<ElectroborrLogoProps> = ({
             <circle cx="275" cy="62" r="2" fill="#10B981" />
           </g>
 
-          {/* Puntos de soldadura / nodos PCB */}
           <circle cx="110" cy="60" r="2.5" fill="#10B981" />
           <circle cx="95" cy="70" r="2.5" fill="#10B981" />
           <circle cx="115" cy="78" r="2.5" fill="#10B981" />
@@ -73,12 +68,12 @@ export const ElectroborrLogo: React.FC<ElectroborrLogoProps> = ({
 
       {/* Logotipo Tipográfico: ELECTROBORR con botones de encendido en las "O" */}
       {variant !== 'symbol-only' && (
-        <div className="flex flex-col items-center mt-0.5">
-          <div className="flex items-center tracking-tight font-heading font-black text-zinc-100 text-lg sm:text-2xl leading-none">
+        <div className="flex flex-col items-start sm:items-center mt-0.5 max-w-full">
+          <div className="flex items-center tracking-tight font-heading font-black text-zinc-100 text-sm sm:text-xl leading-none">
             <span>ELECTR</span>
             
             {/* Primera O con botón de Power */}
-            <span className="relative inline-flex items-center justify-center mx-0.5 w-[0.85em] h-[0.85em]">
+            <span className="relative inline-flex items-center justify-center mx-0.5 w-[0.8em] h-[0.8em] shrink-0">
               <svg className="w-full h-full text-zinc-100" viewBox="0 0 24 24" fill="none">
                 <path 
                   d="M 6.34 7.34 A 8 8 0 1 0 17.66 7.34" 
@@ -98,7 +93,7 @@ export const ElectroborrLogo: React.FC<ElectroborrLogoProps> = ({
             <span>B</span>
 
             {/* Segunda O con botón de Power */}
-            <span className="relative inline-flex items-center justify-center mx-0.5 w-[0.85em] h-[0.85em]">
+            <span className="relative inline-flex items-center justify-center mx-0.5 w-[0.8em] h-[0.8em] shrink-0">
               <svg className="w-full h-full text-zinc-100" viewBox="0 0 24 24" fill="none">
                 <path 
                   d="M 6.34 7.34 A 8 8 0 1 0 17.66 7.34" 
@@ -118,13 +113,13 @@ export const ElectroborrLogo: React.FC<ElectroborrLogoProps> = ({
             <span>RR</span>
           </div>
 
-          {/* Subtítulo Oficial con Líneas de Acento en Verde */}
-          <div className="flex items-center gap-2 mt-1 w-full justify-center">
-            <span className="h-[1px] w-6 bg-gradient-to-r from-transparent to-emerald-500/80" />
-            <span className="font-mono text-[8px] sm:text-[9.5px] uppercase tracking-[0.22em] text-zinc-300 font-medium whitespace-nowrap">
-              Electromecánica Integral del Automotor
+          {/* Subtítulo Oficial Responsive (Nunca desborda) */}
+          <div className="flex items-center gap-1.5 sm:gap-2 mt-0.5 sm:mt-1 max-w-full">
+            <span className="hidden sm:inline-block h-[1px] w-4 sm:w-6 bg-gradient-to-r from-transparent to-emerald-500/80 shrink-0" />
+            <span className="font-mono text-[7px] sm:text-[9px] uppercase tracking-wider text-zinc-400 font-medium truncate">
+              Electromecánica Integral
             </span>
-            <span className="h-[1px] w-6 bg-gradient-to-l from-transparent to-emerald-500/80" />
+            <span className="hidden sm:inline-block h-[1px] w-4 sm:w-6 bg-gradient-to-l from-transparent to-emerald-500/80 shrink-0" />
           </div>
         </div>
       )}

@@ -21,6 +21,7 @@ export interface ServiceItem {
   shortDescription: string;
   heroHighlight: string;
   iconName: string;
+  imageUrl: string;
   // Perfil Dual Tekmetric: Explicación amigable vs Ficha de ingeniería
   clientProfileSimple: {
     summary: string;

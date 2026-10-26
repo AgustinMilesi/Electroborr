@@ -135,6 +135,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDescription: "Escaneo computarizado con equipamiento original, medición de ramales eléctricos, inyección Nafta/Diésel, ABS, Airbag y resolución de fallas fantasmas.",
     heroHighlight: "Localizamos la causa raíz de cualquier testigo en tablero sin cambiar piezas al azar.",
     iconName: "Cpu",
+    imageUrl: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=800&q=80",
     clientProfileSimple: {
       summary: "¿Se prendió una luz en el tablero o el auto tironea sin explicación? Te entregamos un informe claro que traduce los códigos técnicos a soluciones concretas y presupuesto exacto.",
       benefits: [
@@ -211,6 +212,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDescription: "Prueba y diagnóstico en banco de módulos, reparación y verificación de ECUs, clonación y virginización, hermanado de conjuntos y codificación.",
     heroHighlight: "Salvamos tu computadora de motor original. Si es irreparable, clonamos la información a una sustituta sin perder llaves ni odómetro.",
     iconName: "CircuitBoard",
+    imageUrl: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
     clientProfileSimple: {
       summary: "Si tu mecánico te dijo 'se quemó la computadora' o el auto no arranca porque no reconoce la llave, no compres una nueva a ciegas. En nuestro banco reparamos circuitos dañados o clonamos tus datos a un módulo usado por una fracción del costo de uno nuevo.",
       benefits: [
@@ -286,6 +288,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDescription: "Configuraciones avanzadas en banco y vehículo: AdBlue OFF, EGR OFF, DPF/FAP OFF (eliminación de fallas crónicas) y limitadores de velocidad/par.",
     heroHighlight: "Solucionamos fallas crónicas de sistemas anticontaminación en Diésel modernos que dejan tu vehículo inmovilizado o sin potencia.",
     iconName: "Binary",
+    imageUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
     clientProfileSimple: {
       summary: "¿Tu utilitario o camioneta Diésel se puso en cuenta regresiva de kilómetros por falla de urea (AdBlue), o el filtro de partículas (DPF) vive tapado? Te ofrecemos soluciones definitivas de software para recuperar la confiabilidad y no gastar fortunas en sensores que vuelven a fallar.",
       benefits: [
@@ -359,6 +362,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDescription: "Sistemas de carga inteligente y arranque, iluminación LED/xenón, inyección electrónica, infoentretenimiento, sistemas ADAS-AFIL y diagnóstico de redes CAN-Bus.",
     heroHighlight: "Resolvemos problemas eléctricos complejos que queman fusibles o hacen enloquecer los tableros digitales.",
     iconName: "Zap",
+    imageUrl: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=800&q=80",
     clientProfileSimple: {
       summary: "¿Baterías que se descargan de la noche a la mañana, luces que parpadean o sistemas de asistencia que marcan error? Diagnosticamos circuitos eléctricos completos con prolijidad de fábrica, sin cables colgando ni empalmes improvisados.",
       benefits: [
@@ -434,6 +438,7 @@ export const SERVICES_DATA: ServiceItem[] = [
     shortDescription: "Cambio de kits de distribución (Nafta y Diésel) con trabas de levas específicas, embragues, frenos completos con rectificación y tren delantero.",
     heroHighlight: "Aseguramos la integridad de tu motor con herramientas de calado milimétrico y torquímetro según manual de taller.",
     iconName: "Wrench",
+    imageUrl: "https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&w=800&q=80",
     clientProfileSimple: {
       summary: "El cambio de correa de distribución o la reparación de frenos no admite errores. En ELECTROBORR sincronizamos tu motor con las herramientas originales de cada fabricante y ajustamos cada bulón con torquímetro para que manejes con absoluta tranquilidad.",
       benefits: [

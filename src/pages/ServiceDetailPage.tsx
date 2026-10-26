@@ -85,8 +85,18 @@ export const ServiceDetailPage: React.FC = () => {
         </div>
 
         {/* Hero de Servicio */}
-        <div className="rounded-3xl bg-zinc-900/70 border border-zinc-800 p-8 sm:p-12 relative overflow-hidden backdrop-blur-sm">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-8">
+        <div className="rounded-3xl bg-zinc-900/70 border border-zinc-800 p-6 sm:p-12 relative overflow-hidden backdrop-blur-sm">
+          {/* Imagen de fondo sutil */}
+          <div className="absolute right-0 top-0 bottom-0 w-full sm:w-1/2 opacity-20 pointer-events-none overflow-hidden">
+            <img
+              src={service.imageUrl}
+              alt={service.title}
+              className="w-full h-full object-cover object-center filter grayscale contrast-125"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-zinc-900 via-zinc-900/90 to-transparent" />
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-8 relative z-10">
             <div className="w-16 h-16 rounded-2xl bg-zinc-950 border border-zinc-800 flex items-center justify-center">
               {getServiceIcon(service.iconName)}
             </div>
