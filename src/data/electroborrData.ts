@@ -10,7 +10,7 @@ import {
 export const WORKSHOP_DATA: WorkshopData = {
   name: "ELECTROBORR",
   brandSubtitle: "Electromecánica Integral del Automotor",
-  owner: "Nacho",
+  owner: "Ignacio Borra",
   taglines: [
     "Tecnología de última generación para un diagnóstico preciso y confiable",
     "La electrónica también es parte del motor",
@@ -98,14 +98,14 @@ export const WORKSHOP_DATA: WorkshopData = {
     highlight: "100% Bonificado al realizar servicio mecánico o de distribución",
     description: "Al reservar tu turno a través de esta web, recibís prioridad inmediata en la agenda técnica y el control computarizado de carga de batería, alternador y escaneo de módulos sin costo adicional al contratar cualquier mantenimiento preventivo o correctivo.",
     terms: "Válido mencionando el código WEB-ELECTRO2026 al iniciar la conversación de WhatsApp. Un cupón por vehículo.",
-    whatsappPresetText: "Hola Nacho! Quiero solicitar turno para mi auto aprovechando el beneficio web [WEB-ELECTRO2026]."
+    whatsappPresetText: "Hola! Quiero solicitar turno para mi auto aprovechando el beneficio web [WEB-ELECTRO2026]."
   },
   story: {
     lead: "La mecánica tradicional ya no alcanza. Los autos modernos son computadoras sobre ruedas que exigen precisión de laboratorio.",
     body: [
-      "Fundado y liderado por Nacho en Loma Hermosa, ELECTROBORR nació con una convicción clara: terminar con el método de 'cambiar piezas a ciegas'. En una industria donde muchos talleres tradicionales reemplazan sensores costosos por intuición, nosotros invertimos en instrumental de laboratorio, osciloscopios de 4 canales y bancos de prueba de módulos.",
+      "Fundado y liderado por Ignacio Borra en Loma Hermosa, ELECTROBORR nació con una convicción clara: terminar con el método de 'cambiar piezas a ciegas'. En una industria donde muchos talleres tradicionales reemplazan sensores costosos por intuición, nosotros invertimos en instrumental de laboratorio, osciloscopios de 4 canales y bancos de prueba de módulos.",
       "Entendemos que la electrónica no es un accesorio aislado; es el cerebro y el sistema nervioso del motor. Por eso unimos bajo el mismo techo la mecánica pesada de precisión —como distribuciones sincronizadas y sistemas de freno— con la microelectrónica de ECUs, inmovilizadores y redes multiplexadas.",
-      "En Florida 647 cuidamos el vehículo de cada vecino de Loma Hermosa y de todo el Partido de Tres de Febrero como si fuera propio: con explicaciones honestas, diagnósticos que se demuestran con lecturas reales y presupuestos cerrados antes de tocar un tornillo."
+      "En Florida 647 nos encargamos personalmente del vehículo de cada vecino de Loma Hermosa y de todo el Partido de Tres de Febrero como si fuera propio: con explicaciones honestas, diagnósticos que se demuestran con lecturas reales y presupuestos cerrados antes de tocar un tornillo."
     ],
     pillars: [
       {
@@ -117,8 +117,8 @@ export const WORKSHOP_DATA: WorkshopData = {
         desc: "Reparamos y clonamos unidades de mando sin necesidad de tercerizar ni enviar tu vehículo a intermediarios."
       },
       {
-        title: "Atención Directa por Nacho",
-        desc: "Hablas directamente con el especialista a cargo de tu auto, con comunicación transparente y fotos del proceso vía WhatsApp."
+        title: "Atendido por su Dueño",
+        desc: "Se encarga directamente el dueño del taller (Ignacio Borra), con comunicación transparente y fotos del proceso vía WhatsApp."
       }
     ]
   }
@@ -575,7 +575,7 @@ export const REVIEWS_DATA: Review[] = [
     carModel: "Volkswagen Amarok 2.0 TDI",
     rating: 5,
     date: "Hace 2 semanas",
-    comment: "Excelente atención de Nacho. En dos talleres me decían de cambiar la ECU entera por una fortuna. Nacho la probó en banco, reparó un driver quemado y me ahorró un dineral. Además me explicó todo con el osciloscopio adelante mío. 100% honesto.",
+    comment: "Excelente atención del taller. En dos talleres me decían de cambiar la ECU entera por una fortuna. Acá la probaron en banco, repararon un driver quemado y me ahorraron un dineral. Además me explicaron todo con el osciloscopio adelante mío. 100% honestos.",
     serviceCategory: "Laboratorio Electrónico",
     verified: true,
     location: "Loma Hermosa, Tres de Febrero"
@@ -608,7 +608,7 @@ export const REVIEWS_DATA: Review[] = [
     carModel: "Chevrolet Onix 1.4",
     rating: 5,
     date: "Hace 1 mes y medio",
-    comment: "Se me descargaba la batería cada 3 días. Nacho encontró un consumo parásito en un módulo de alarma que habían instalado mal en otro lado. Muy agradecida por la amabilidad y por la claridad con la que me explicaron todo.",
+    comment: "Se me descargaba la batería cada 3 días. El dueño encontró un consumo parásito en un módulo de alarma que habían instalado mal en otro lado. Muy agradecida por la amabilidad y por la claridad con la que me explicaron todo.",
     serviceCategory: "Electricidad Integral",
     verified: true,
     location: "El Palomar, Tres de Febrero"
@@ -625,7 +625,7 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     readTime: "4 min de lectura",
     date: "Octubre 2026",
     category: "Diagnóstico Electrónico",
-    author: "Nacho - ELECTROBORR",
+    author: "Ignacio Borra - ELECTROBORR",
     geoTarget: "Loma Hermosa / Tres de Febrero",
     intro: "Vas circulando por Ruta 8 o por las avenidas de Tres de Febrero y, de repente, ese pequeño icono amarillo con forma de motor se enciende en tu tablero. El pulso se acelera: ¿puedo seguir manejando o tengo que llamar a la grúa de inmediato? En esta guía técnica directa, te explicamos cómo actuar con seguridad.",
     sections: [
@@ -656,7 +656,7 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     readTime: "5 min de lectura",
     date: "Octubre 2026",
     category: "Laboratorio Electrónico",
-    author: "Nacho - ELECTROBORR",
+    author: "Ignacio Borra - ELECTROBORR",
     geoTarget: "Loma Hermosa / Gran Buenos Aires",
     intro: "Cuando un vehículo deja de arrancar y el diagnóstico apunta a la ECU (Engine Control Unit), el dueño suele recibir una noticia demoledora: un módulo nuevo en concesionaria oficial cuesta fortunas y tarda meses en importarse. Sin embargo, en el 80% de los casos existe una alternativa infinitamente más rápida, económica y confiable.",
     sections: [
@@ -687,7 +687,7 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     readTime: "6 min de lectura",
     date: "Octubre 2026",
     category: "Software de Motor",
-    author: "Nacho - ELECTROBORR",
+    author: "Ignacio Borra - ELECTROBORR",
     geoTarget: "Loma Hermosa / Zona Oeste / Norte",
     intro: "Los motores turbodiésel modernos (Common Rail) son máquinas de alta eficiencia y excelente torque. Sin embargo, para cumplir con las normativas Euro 5 y Euro 6, incorporan tres subsistemas extremadamente sensibles: la recirculación de gases (EGR), el filtro de partículas (DPF/FAP) y la inyección de urea líquida (AdBlue / SCR). En el tránsito trabado de Buenos Aires, estos sistemas suelen convertirse en un dolor de cabeza crónico.",
     sections: [
@@ -718,7 +718,7 @@ export const BLOG_POSTS_DATA: BlogPost[] = [
     readTime: "4 min de lectura",
     date: "Octubre 2026",
     category: "Mecánica Preventiva",
-    author: "Nacho - ELECTROBORR",
+    author: "Ignacio Borra - ELECTROBORR",
     geoTarget: "Loma Hermosa / Tres de Febrero",
     intro: "Existe un dicho popular en los talleres mecánicos: 'La distribución no avisa, se corta'. Y cuando se corta con el motor en marcha, los pistones impactan contra las válvulas abiertas, provocando un daño económico que a menudo supera el 30% del valor del auto. Repasamos aquí los plazos reales y los síntomas que nunca debés ignorar.",
     sections: [

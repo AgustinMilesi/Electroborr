@@ -134,13 +134,13 @@ export const BlogPostPage: React.FC = () => {
 
           <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <a
-              href={`https://wa.me/${WORKSHOP_DATA.contact.whatsappRaw}?text=${encodeURIComponent(`Hola Nacho! Leí el artículo sobre "${post.title}" y quisiera consultar por mi vehículo.`)}`}
+              href={`https://wa.me/${WORKSHOP_DATA.contact.whatsappRaw}?text=${encodeURIComponent(`Hola! Leí el artículo sobre "${post.title}" y quisiera consultar por mi vehículo.`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold text-sm transition-all"
             >
               <MessageSquare className="w-4 h-4 fill-zinc-950" />
-              <span>Consultar este caso con Nacho por WhatsApp</span>
+              <span>Consultar este caso con el Dueño por WhatsApp</span>
             </a>
 
             <Link

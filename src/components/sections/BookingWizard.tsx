@@ -77,7 +77,7 @@ export const BookingWizard: React.FC<BookingWizardProps> = ({ initialSymptom }) 
             Reservá Tu Turno en 30 Segundos
           </h2>
           <p className="mt-2 text-sm text-zinc-400">
-            Ingresá los datos de tu vehículo y coordiná directamente con Nacho por WhatsApp sin intermediarios ni costos de reserva.
+            Ingresá los datos de tu vehículo y coordiná directamente por WhatsApp sin intermediarios ni costos de reserva.
           </p>
         </div>
 

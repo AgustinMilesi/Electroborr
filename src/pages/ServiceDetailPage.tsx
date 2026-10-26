@@ -133,13 +133,13 @@ export const ServiceDetailPage: React.FC = () => {
             </button>
 
             <a
-              href={`https://wa.me/${WORKSHOP_DATA.contact.whatsappRaw}?text=${encodeURIComponent(`Hola Nacho! Quisiera consultar sobre el servicio de ${service.title}.`)}`}
+              href={`https://wa.me/${WORKSHOP_DATA.contact.whatsappRaw}?text=${encodeURIComponent(`Hola! Quisiera consultar sobre el servicio de ${service.title}.`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-100 font-medium text-sm transition-colors border border-zinc-700/60"
             >
               <MessageSquare className="w-4 h-4 text-emerald-400" />
-              <span>Consultar a Nacho por WhatsApp</span>
+              <span>Consultar con el Dueño por WhatsApp</span>
             </a>
           </div>
         </div>

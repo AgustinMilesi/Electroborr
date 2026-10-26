@@ -27,7 +27,7 @@ export const OurStoryAndWorkshop: React.FC = () => {
           </p>
         </div>
 
-        {/* Bloque Principal: Texto de Nacho + Showcase de Equipamiento */}
+        {/* Bloque Principal: Historia del Taller + Showcase de Equipamiento */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Texto Humano y Profesional */}

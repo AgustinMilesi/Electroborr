@@ -41,10 +41,10 @@ export const TrustAndWarranty: React.FC = () => {
           </p>
         </div>
 
-        {/* Grilla 3 Columnas: 1. Nacho con Foto Real de Taller | 2. Garantía 90 Días | 3. Cupón Web */}
+        {/* Grilla 3 Columnas: 1. Ignacio Borra & Taller | 2. Garantía 90 Días | 3. Cupón Web */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           
-          {/* Card 1: Nacho & El Taller con Imagen Real de Taller */}
+          {/* Card 1: Ignacio Borra & El Taller con Imagen Real de Taller */}
           <div className="rounded-2xl bg-zinc-900/60 border border-zinc-800 overflow-hidden flex flex-col justify-between">
             <div className="relative h-40 w-full overflow-hidden border-b border-zinc-800">
               <img
@@ -65,10 +65,10 @@ export const TrustAndWarranty: React.FC = () => {
             <div className="p-6 flex-1 flex flex-col justify-between">
               <div>
                 <h3 className="font-heading font-bold text-base text-zinc-100 mb-1">
-                  Atendido por su dueño (Nacho)
+                  Atendido y supervisado por su dueño
                 </h3>
                 <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed mb-4">
-                  &ldquo;La electrónica también es parte del motor&rdquo;. No cambiamos piezas al azar por intuición: mostramos la señal real que justifica cada reparación.
+                  <strong>Ignacio Borra</strong> lidera personalmente cada diagnóstico: &ldquo;La electrónica también es parte del motor&rdquo;. No cambiamos piezas al azar por intuición: mostramos la señal real que justifica cada trabajo.
                 </p>
 
                 <div className="space-y-2 text-xs text-zinc-300">

@@ -76,7 +76,7 @@ export const FaqSection: React.FC = () => {
         <div className="mt-8 text-center p-4 rounded-2xl bg-zinc-900/40 border border-zinc-800 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="text-left text-xs">
             <span className="font-semibold text-zinc-200 block">¿Tenés otra consulta sobre tu vehículo?</span>
-            <span className="text-zinc-400">Nacho responde directamente por WhatsApp.</span>
+            <span className="text-zinc-400">El dueño responde directamente por WhatsApp.</span>
           </div>
 
           <a
@@ -86,7 +86,7 @@ export const FaqSection: React.FC = () => {
             className="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-zinc-100 text-xs font-semibold border border-zinc-700/60 transition-colors"
           >
             <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Consultar a Nacho</span>
+            <span>Consultar con el Dueño</span>
           </a>
         </div>
 

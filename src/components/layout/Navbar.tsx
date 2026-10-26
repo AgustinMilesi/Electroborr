@@ -198,7 +198,7 @@ export const Navbar: React.FC = () => {
               className="flex items-center gap-2.5 px-3 py-2 text-sm font-medium text-zinc-200 hover:bg-zinc-900 rounded-lg text-left"
             >
               <Cpu className="w-4 h-4 text-emerald-500" />
-              <span>Historia de Nacho y el Taller</span>
+              <span>Historia y Filosofía del Taller</span>
             </button>
 
             <button

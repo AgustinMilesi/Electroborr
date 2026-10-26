@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
   };
 
   const handleQuickWhatsApp = () => {
-    const text = `Hola Nacho! Te escribo desde la web de Electroborr para consultar por un turno para mi ${selectedBrand} por ${selectedService}.`;
+    const text = `Hola! Te escribo desde la web de Electroborr para consultar por un turno para mi ${selectedBrand} por ${selectedService}.`;
     window.open(`https://wa.me/${WORKSHOP_DATA.contact.whatsappRaw}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
             </h1>
 
             <p className="text-sm sm:text-base text-zinc-300 max-w-xl leading-relaxed">
-              Atendido directamente por <strong>Nacho</strong>. Diagnóstico computarizado original, reparación de computadoras de motor (ECUs), inyección y mecánica general en Tres de Febrero.
+              Atendido y supervisado directamente por su dueño (<strong>Ignacio Borra</strong>). Diagnóstico computarizado original, reparación de computadoras de motor (ECUs), inyección y mecánica general en Tres de Febrero.
             </p>
 
             {/* Badges Rápidos de Confianza */}
@@ -168,7 +168,7 @@ export const Hero: React.FC = () => {
                   className="w-full py-3 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-md active:scale-98"
                 >
                   <Phone className="w-4 h-4 fill-zinc-950" />
-                  <span>Consultar Turno a Nacho por WhatsApp</span>
+                  <span>Consultar Turno con el Dueño por WhatsApp</span>
                 </button>
               </div>
 

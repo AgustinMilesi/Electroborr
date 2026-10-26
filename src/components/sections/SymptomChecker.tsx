@@ -122,7 +122,7 @@ export const SymptomChecker: React.FC<SymptomCheckerProps> = ({ onSelectSymptom 
             <div className="p-3.5 rounded-xl bg-zinc-950 border border-zinc-800 space-y-1">
               <span className="text-[10px] font-mono uppercase text-zinc-400 font-semibold flex items-center gap-1">
                 <ShieldAlert className="w-3 h-3 text-amber-400" />
-                Consejo de Nacho:
+                Consejo Técnico del Taller:
               </span>
               <p className="text-xs text-zinc-400 leading-relaxed">
                 {selectedSymptom.initialAdvice}

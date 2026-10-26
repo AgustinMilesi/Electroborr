@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
 
             <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-[11px] text-zinc-300">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
-              <span>Atendido por su dueño (Nacho)</span>
+              <span>Atendido directamente por su dueño</span>
             </div>
           </div>
 

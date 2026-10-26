@@ -35,7 +35,7 @@ export const BlogCarousel: React.FC = () => {
               <span>GUÍAS TÉCNICAS & CONSEJOS LOCALES</span>
             </div>
             <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-zinc-50 tracking-tight">
-              ¿Qué le pasa a tu auto? Guías por Nacho
+              ¿Qué le pasa a tu auto? Guías Técnicas
             </h2>
           </div>
 
