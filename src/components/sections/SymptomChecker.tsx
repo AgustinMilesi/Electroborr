@@ -20,19 +20,19 @@ interface SymptomCheckerProps {
 const getSymptomIcon = (iconName: string) => {
   switch (iconName) {
     case 'AlertTriangle':
-      return <AlertTriangle className="w-5 h-5 text-amber-400" />;
+      return <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />;
     case 'PowerOff':
-      return <PowerOff className="w-5 h-5 text-rose-400" />;
+      return <PowerOff className="w-3.5 h-3.5 text-rose-400" />;
     case 'Gauge':
-      return <Gauge className="w-5 h-5 text-amber-400" />;
+      return <Gauge className="w-3.5 h-3.5 text-amber-400" />;
     case 'BatteryWarning':
-      return <BatteryWarning className="w-5 h-5 text-amber-400" />;
+      return <BatteryWarning className="w-3.5 h-3.5 text-amber-400" />;
     case 'Disc':
-      return <Disc className="w-5 h-5 text-zinc-300" />;
+      return <Disc className="w-3.5 h-3.5 text-zinc-300" />;
     case 'Clock':
-      return <Clock className="w-5 h-5 text-emerald-400" />;
+      return <Clock className="w-3.5 h-3.5 text-emerald-400" />;
     default:
-      return <AlertTriangle className="w-5 h-5 text-amber-400" />;
+      return <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />;
   }
 };
 
@@ -56,148 +56,93 @@ export const SymptomChecker: React.FC<SymptomCheckerProps> = ({ onSelectSymptom 
     }
   };
 
-  const getUrgencyBadge = (urgency: Symptom['urgency']) => {
-    switch (urgency) {
-      case 'critica':
-        return (
-          <span className="font-mono text-[10px] uppercase px-2 py-0.5 rounded bg-rose-500/10 border border-rose-500/30 text-rose-400 font-semibold">
-            Atención Inmediata
-          </span>
-        );
-      case 'moderada':
-        return (
-          <span className="font-mono text-[10px] uppercase px-2 py-0.5 rounded bg-amber-500/10 border border-amber-500/30 text-amber-400 font-semibold">
-            Revisión Pronta
-          </span>
-        );
-      case 'preventiva':
-        return (
-          <span className="font-mono text-[10px] uppercase px-2 py-0.5 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-semibold">
-            Mantenimiento Preventivo
-          </span>
-        );
-    }
-  };
-
   return (
-    <section id="sintomas" className="py-20 bg-zinc-950 border-b border-zinc-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="sintomas" className="py-12 sm:py-16 bg-zinc-950 border-b border-zinc-800/80">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Encabezado */}
-        <div className="max-w-3xl mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-emerald-400 mb-3">
+        <div className="text-center max-w-xl mx-auto mb-8">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-emerald-400 mb-2">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>DIAGNOSTICADOR INTERACTIVO 24/7</span>
+            <span>DIAGNOSTICADOR DE FALLAS EN VIVO</span>
           </div>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-zinc-50 tracking-tight">
-            ¿Qué falla o síntoma presenta tu vehículo?
+          <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-zinc-50 tracking-tight">
+            ¿Qué luz o falla tiene tu vehículo?
           </h2>
-          <p className="mt-3 text-base text-zinc-400 leading-relaxed">
-            Seleccioná lo que estás experimentando al volante para recibir una evaluación técnica preliminar, precauciones de seguridad y pasar directo al turnero con tu caso cargado.
-          </p>
         </div>
 
-        {/* Layout en 2 Columnas: Lista de Síntomas vs Diagnóstico Detallado */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
-          {/* Columna Izquierda: Botones de Síntomas */}
-          <div className="lg:col-span-5 space-y-2.5">
-            <div className="text-xs font-mono uppercase tracking-wider text-zinc-500 pb-2">
-              Seleccioná un síntoma recurrente:
-            </div>
-            
-            {SYMPTOMS_DATA.map((symptom) => {
-              const isSelected = selectedSymptom.id === symptom.id;
-              return (
-                <button
-                  key={symptom.id}
-                  onClick={() => handleSelect(symptom)}
-                  className={`w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between gap-3 ${
-                    isSelected 
-                      ? 'bg-zinc-900 border-emerald-500/60 shadow-lg shadow-emerald-500/5' 
-                      : 'bg-zinc-900/40 border-zinc-800/80 hover:bg-zinc-900/70 hover:border-zinc-700'
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-zinc-950 border border-zinc-800 shrink-0">
-                      {getSymptomIcon(symptom.iconName)}
-                    </div>
-                    <span className={`text-xs sm:text-sm font-medium ${isSelected ? 'text-white font-semibold' : 'text-zinc-300'}`}>
-                      {symptom.label}
-                    </span>
-                  </div>
-                  
-                  <div className="shrink-0">
-                    <div className={`w-2 h-2 rounded-full ${isSelected ? 'bg-emerald-500' : 'bg-transparent'}`} />
-                  </div>
-                </button>
-              );
-            })}
+        {/* Chips de Síntomas Horizontales e Interactivos */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+          {SYMPTOMS_DATA.map((symptom) => {
+            const isSelected = selectedSymptom.id === symptom.id;
+            return (
+              <button
+                key={symptom.id}
+                onClick={() => handleSelect(symptom)}
+                className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-xs font-medium transition-all ${
+                  isSelected
+                    ? 'bg-emerald-500 text-zinc-950 font-bold shadow-md scale-105'
+                    : 'bg-zinc-900/80 border border-zinc-800 text-zinc-300 hover:border-zinc-700 hover:bg-zinc-800'
+                }`}
+              >
+                {getSymptomIcon(symptom.iconName)}
+                <span>{symptom.label.split('(')[0]}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Tarjeta de Diagnóstico Dinámico */}
+        <div className="rounded-3xl bg-zinc-900/60 border border-zinc-800 p-6 sm:p-7 backdrop-blur-sm space-y-4 shadow-lg">
+          <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-zinc-800/80">
+            <h3 className="font-heading font-bold text-sm sm:text-base text-zinc-100">
+              {selectedSymptom.label}
+            </h3>
+            <span className={`font-mono text-[10px] uppercase px-2 py-0.5 rounded font-semibold ${
+              selectedSymptom.urgency === 'critica'
+                ? 'bg-rose-500/10 text-rose-400 border border-rose-500/30'
+                : selectedSymptom.urgency === 'moderada'
+                ? 'bg-amber-500/10 text-amber-400 border border-amber-500/30'
+                : 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/30'
+            }`}>
+              {selectedSymptom.urgency === 'critica' ? 'Atención Inmediata' : selectedSymptom.urgency === 'moderada' ? 'Revisión Pronta' : 'Mantenimiento Preventivo'}
+            </span>
           </div>
 
-          {/* Columna Derecha: Tarjeta de Diagnóstico Técnico Tranquilizador */}
-          <div className="lg:col-span-7">
-            <div className="rounded-2xl bg-zinc-900/80 border border-zinc-800 p-6 sm:p-8 backdrop-blur-sm relative overflow-hidden">
-              
-              {/* Header de la tarjeta */}
-              <div className="flex flex-wrap items-center justify-between gap-3 pb-6 border-b border-zinc-800">
-                <div className="flex items-center gap-2">
-                  <div className="p-2 rounded-lg bg-zinc-950 border border-zinc-800">
-                    {getSymptomIcon(selectedSymptom.iconName)}
-                  </div>
-                  <div>
-                    <h3 className="font-heading font-bold text-base sm:text-lg text-zinc-100">
-                      {selectedSymptom.label}
-                    </h3>
-                    <span className="text-[11px] font-mono text-zinc-500 uppercase">
-                      Diagnóstico Preliminar
-                    </span>
-                  </div>
-                </div>
-                {getUrgencyBadge(selectedSymptom.urgency)}
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-3.5 rounded-xl bg-zinc-950 border border-zinc-800 space-y-1">
+              <span className="text-[10px] font-mono uppercase text-emerald-400 font-semibold block">
+                Causa técnica probable:
+              </span>
+              <p className="text-xs text-zinc-300 leading-relaxed">
+                {selectedSymptom.technicalDiagnosis}
+              </p>
+            </div>
 
-              {/* Explicación Técnica de la Falla */}
-              <div className="mt-6 space-y-6">
-                <div>
-                  <h4 className="text-xs font-mono uppercase tracking-wider text-emerald-400 mb-2">
-                    Qué está ocurriendo a nivel electrónico o mecánico:
-                  </h4>
-                  <p className="text-sm text-zinc-300 leading-relaxed bg-zinc-950/60 p-4 rounded-xl border border-zinc-800/80">
-                    {selectedSymptom.technicalDiagnosis}
-                  </p>
-                </div>
-
-                {/* Consejo de Seguridad Inmediato */}
-                <div className="p-4 rounded-xl bg-zinc-900 border border-zinc-800 space-y-2">
-                  <div className="flex items-center gap-2 text-xs font-semibold text-zinc-200">
-                    <ShieldAlert className="w-4 h-4 text-emerald-400" />
-                    <span>Recomendación Inmediata de Nacho:</span>
-                  </div>
-                  <p className="text-xs text-zinc-400 leading-relaxed">
-                    {selectedSymptom.initialAdvice}
-                  </p>
-                </div>
-
-                {/* Acción de Reserva con Síntoma Precargado */}
-                <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 border-t border-zinc-800">
-                  <div className="text-xs text-zinc-500">
-                    * Al presionar, cargamos este síntoma en el turnero web.
-                  </div>
-
-                  <button
-                    onClick={handleProceedToBooking}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold text-xs sm:text-sm transition-all shadow-md active:scale-95"
-                  >
-                    <span>Agendar Turno para esta Falla</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-
+            <div className="p-3.5 rounded-xl bg-zinc-950 border border-zinc-800 space-y-1">
+              <span className="text-[10px] font-mono uppercase text-zinc-400 font-semibold flex items-center gap-1">
+                <ShieldAlert className="w-3 h-3 text-amber-400" />
+                Consejo de Nacho:
+              </span>
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                {selectedSymptom.initialAdvice}
+              </p>
             </div>
           </div>
 
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span className="text-[11px] text-zinc-500 font-mono">
+              * Precargamos esta falla directamente en el turnero
+            </span>
+
+            <button
+              onClick={handleProceedToBooking}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-zinc-950 font-bold text-xs transition-all shadow-sm active:scale-95"
+            >
+              <span>Pedir Turno para este Problema</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+          </div>
         </div>
 
       </div>

@@ -23,7 +23,7 @@ export const Navbar: React.FC = () => {
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
-    const targetId = (id === 'servicios' || id === 'sintomas') ? 'interactivo' : (id === 'garantia' ? 'taller' : id);
+    const targetId = id === 'servicios' ? 'carrusel-servicios' : id === 'sintomas' ? 'sintomas' : id === 'garantia' ? 'taller' : id;
     if (!isHome) {
       window.location.href = `/#${targetId}`;
       return;
