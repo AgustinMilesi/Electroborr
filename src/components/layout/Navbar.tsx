@@ -8,8 +8,7 @@ import {
   Calendar, 
   Wrench, 
   HelpCircle, 
-  BookOpen, 
-  Award,
+  Star,
   Sparkles
 } from 'lucide-react';
 import { SERVICES_DATA } from '../../data/electroborrData';
@@ -24,7 +23,7 @@ export const Navbar: React.FC = () => {
 
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
-    const targetId = id === 'servicios' ? 'carrusel-servicios' : id === 'sintomas' ? 'sintomas' : id === 'garantia' ? 'taller' : id;
+    const targetId = id === 'servicios' ? 'carrusel-servicios' : id === 'sintomas' ? 'sintomas' : id === 'opiniones' ? 'opiniones' : id;
     if (!isHome) {
       window.location.href = `/#${targetId}`;
       return;
@@ -109,25 +108,11 @@ export const Navbar: React.FC = () => {
             </button>
 
             <button 
-              onClick={() => scrollToSection('taller')}
-              className="hover:text-white transition-colors"
-            >
-              El Taller
-            </button>
-
-            <button 
-              onClick={() => scrollToSection('garantia')}
+              onClick={() => scrollToSection('opiniones')}
               className="hover:text-white transition-colors flex items-center gap-1"
             >
-              <Award className="w-3.5 h-3.5 text-zinc-500" />
-              <span>Garantía & Cupón</span>
-            </button>
-
-            <button 
-              onClick={() => scrollToSection('blog')}
-              className="hover:text-white transition-colors"
-            >
-              Guías Técnicas
+              <Star className="w-3.5 h-3.5 text-emerald-400" />
+              <span>Opiniones</span>
             </button>
 
             <button 
@@ -194,27 +179,11 @@ export const Navbar: React.FC = () => {
             </button>
 
             <button
-              onClick={() => scrollToSection('taller')}
+              onClick={() => scrollToSection('opiniones')}
               className="flex items-center gap-2.5 px-3 py-2 text-sm font-medium text-zinc-200 hover:bg-zinc-900 rounded-lg text-left"
             >
-              <Cpu className="w-4 h-4 text-emerald-500" />
-              <span>Historia y Filosofía del Taller</span>
-            </button>
-
-            <button
-              onClick={() => scrollToSection('garantia')}
-              className="flex items-center gap-2.5 px-3 py-2 text-sm font-medium text-zinc-200 hover:bg-zinc-900 rounded-lg text-left"
-            >
-              <Award className="w-4 h-4 text-emerald-500" />
-              <span>Garantía & Cupón Web</span>
-            </button>
-
-            <button
-              onClick={() => scrollToSection('blog')}
-              className="flex items-center gap-2.5 px-3 py-2 text-sm font-medium text-zinc-200 hover:bg-zinc-900 rounded-lg text-left"
-            >
-              <BookOpen className="w-4 h-4 text-emerald-500" />
-              <span>Blog Local (Tres de Febrero)</span>
+              <Star className="w-4 h-4 text-emerald-400" />
+              <span>Opiniones de Clientes (4.9★)</span>
             </button>
 
             <button

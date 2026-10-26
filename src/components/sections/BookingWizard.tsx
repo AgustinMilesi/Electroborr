@@ -253,27 +253,6 @@ export const BookingWizard: React.FC<BookingWizardProps> = ({ initialSymptom }) 
               </div>
             </div>
 
-            {/* Modalidades de Pago en Pills Rápidos */}
-            <div className="rounded-2xl bg-zinc-900/40 border border-zinc-800 p-5 space-y-3">
-              <span className="font-mono text-[10px] uppercase text-zinc-500 tracking-wider block">
-                Medios de Pago Aceptados
-              </span>
-              <div className="grid grid-cols-3 gap-2 text-center">
-                <div className="p-2.5 rounded-xl bg-zinc-950 border border-zinc-800">
-                  <div className="text-xs font-semibold text-zinc-200">Efectivo</div>
-                  <div className="text-[10px] text-emerald-400 mt-0.5 font-mono">Con descuento</div>
-                </div>
-                <div className="p-2.5 rounded-xl bg-zinc-950 border border-zinc-800">
-                  <div className="text-xs font-semibold text-zinc-200">Transferencia</div>
-                  <div className="text-[10px] text-zinc-400 mt-0.5 font-mono">Alias / CBU</div>
-                </div>
-                <div className="p-2.5 rounded-xl bg-zinc-950 border border-zinc-800">
-                  <div className="text-xs font-semibold text-zinc-200">Billeteras</div>
-                  <div className="text-[10px] text-zinc-400 mt-0.5 font-mono">MP / DNI / QR</div>
-                </div>
-              </div>
-            </div>
-
             {/* Dirección y Horarios */}
             <div className="p-3.5 rounded-2xl bg-zinc-900/40 border border-zinc-800 flex items-center justify-between text-xs font-mono text-zinc-400">
               <span className="flex items-center gap-1.5">
