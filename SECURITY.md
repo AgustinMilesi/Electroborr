@@ -5,9 +5,9 @@ Este documento certifica la auditoría de seguridad y las políticas de desarrol
 ---
 
 ## 🛡️ Registro de Auditoría de Seguridad (OWASP Standards)
-- **Fecha de Auditoría:** 26 de Octubre de 2026
-- **Alcance:** Código fuente integral (`src/`, `index.html`, `package.json`, configuraciones de build)
-- **Resultado General:** **APROBADO (0 Vulnerabilidades / 0 Secretos Expuestos)**
+- **Fecha de Auditoría:** 2 de Noviembre de 2026
+- **Alcance:** Código fuente integral (`src/`, `index.html`, `package.json`, configuraciones de build, cabeceras HTTP de producción)
+- **Resultado General:** **APROBADO (0 Vulnerabilidades / 0 Secretos Expuestos / 0 Inyecciones)**
 
 ---
 
@@ -15,11 +15,11 @@ Este documento certifica la auditoría de seguridad y las políticas de desarrol
 
 | Control de Seguridad | Estado | Verificación Técnica |
 | :--- | :---: | :--- |
-| **A01: Inyección (XSS / SQL)** | 🟢 APROBADO | Cero uso de `eval()`, `innerHTML` o `dangerouslySetInnerHTML`. Sanitización de strings en parámetros URL mediante `encodeURIComponent`. |
-| **A02: Exposición de Secretos** | 🟢 APROBADO | Escaneo de patrones de regex negativo para API keys, contraseñas, bearer tokens o credenciales privadas. Archivo `.gitignore` configurado para blindar variables `.env*`. |
-| **A03: Dependencias Vulnerables (Supply Chain)** | 🟢 APROBADO | `npm audit` reporta **0 vulnerabilidades**. `react-router-dom` actualizado a versión segura sin riesgos de Open Redirect. |
+| **A01: Inyección (XSS / SQL)** | 🟢 APROBADO | Cero uso de `eval()`, `innerHTML` o `dangerouslySetInnerHTML`. Sanitización estricta de parámetros y URLs mediante `encodeURIComponent`. |
+| **A02: Exposición de Secretos** | 🟢 APROBADO | Escaneo de patrones de regex negativo para API keys, contraseñas, bearer tokens o credenciales privadas. Archivo `.gitignore` configurado para blindar variables `.env*` y directorios `.vercel`. |
+| **A03: Dependencias Vulnerables (Supply Chain)** | 🟢 APROBADO | `npm audit` reporta **0 vulnerabilidades**. Lockfile sincronizado y librerías seguras. |
 | **A04: Reverse Tabnabbing / Enlaces Externos** | 🟢 APROBADO | Todos los elementos con `target="_blank"` implementan obligatoriamente `rel="noopener noreferrer"`. |
-| **A05: Integridad de Rutas y Navegación** | 🟢 APROBADO | Configuración estricta en `vercel.json` para gestión segura de rutas SPA sin exponer endpoints del servidor. |
+| **A05: Integridad de Rutas y Cabeceras HTTP** | 🟢 APROBADO | Configuración de cabeceras de seguridad estrictas en `vercel.json`: `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `X-XSS-Protection: 1; mode=block`, `Referrer-Policy: strict-origin-when-cross-origin`, `Strict-Transport-Security`, `Permissions-Policy`. |
 | **A06: Tipado y Seguridad de Tipos** | 🟢 APROBADO | Modo estricto de TypeScript (`"strict": true`) sin `any` implícitos ni variables muertas. |
 
 ---
